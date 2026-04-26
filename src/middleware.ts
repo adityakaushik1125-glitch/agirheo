@@ -28,9 +28,10 @@ export async function middleware(request: NextRequest) {
   const isOnboarding = path.startsWith('/onboarding');
   const isPublicPage = path === '/';
   const isApiRoute = path.startsWith('/api');
+  const isSeoFile = path === '/sitemap.xml' || path === '/robots.txt';
 
   // Allow API routes always
-  if (isApiRoute) return supabaseResponse;
+  if (isApiRoute || isSeoFile) return supabaseResponse;
 
   // Not logged in — redirect to login
   if (!user && !isAuthPage && !isPublicPage) {

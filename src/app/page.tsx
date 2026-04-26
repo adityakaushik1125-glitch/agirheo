@@ -187,7 +187,7 @@ export default function HomePage() {
           <div className="font-display text-2xl tracking-widest text-snow/60">
             AGI<span className="text-fire">R</span>HEO
           </div>
-          <div className="text-ash text-xs font-mono">© 2025 AGIRHEO. BUILT FOR WINNERS.</div>
+          <div className="text-ash text-xs font-mono">© {new Date().getFullYear()} AGIRHEO. BUILT FOR WINNERS.</div>
         </div>
       </footer>
     </main>
